@@ -247,6 +247,33 @@ span {
     font-size: 1.3rem;
     cursor: pointer;
 }
+@media (max-width: 768px){
+    .navigation{
+        padding: 0 12px;
+    }
+    .cover-logoss{
+        font-size: 1rem;
+    }
+    .nav-actions{
+        gap: 6px;
+    }
+    .addtask-btn{
+        padding: 10px;
+        font-size: 0; /* hides text */
+        border-radius: 10px;
+    }
+
+    .addtask-btn i{
+        font-size: 1rem;
+    }
+    .profile-btn{
+        width: 36px;
+        height: 36px;
+    }
+    .hamburgers{
+        font-size: 1.5rem;
+    }
+}
 
 /* CONTAINER */
 .tasks-container {
