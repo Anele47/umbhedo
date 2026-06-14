@@ -119,8 +119,8 @@ document.getElementById("priorityChart"),
                 normalTasks
             ],
             backgroundColor:[
-                "teal",
-                "blue"
+                "#4b0082",
+                "#3a0ca3"
             ]
         }]
     }
