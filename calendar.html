@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Calendar</title>
+
+    <!-- FullCalendar CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="calendar-page">
+      <header class="navigation">
+
+    <!-- Left -->
+    <label for="sidebarToggle" class="hamburgers">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Center -->
+    <div class="cover-logoss">
+        <i class="fa-solid fa-check"></i>
+        MyTasks
+    </div>
+
+    <!-- Right -->
+    <div class="nav-actions">
+        <a href="tasks.html" class="addtask-btn">
+            <i class="fa-solid fa-plus"></i>
+            Add Task
+        </a>
+
+        <a href="profile.html" class="profile-btn">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+
+</header>
+   <!-- HIDDEN CHECKBOX CONTROLLER -->
+<input type="checkbox" id="sidebarToggle" class="sidebar-toggle">
+
+
+<!-- SIDEBAR -->
+<aside class="sidebarapp">
+  <h2 class="logo">Menu </h2>
+
+  <nav>
+    <a href="home.html">
+        <i class="fa-solid fa-house"></i> Dashboard
+    </a>
+
+    <a href="tasks.html">
+        <i class="fa-solid fa-list-check"></i> Tasks
+    </a>
+
+    <a href="analytics.html">
+        <i class="fa-solid fa-chart-line"></i> Analytics
+    </a>
+
+    <a href="calendar.html">
+        <i class="fa-solid fa-calendar-days"></i> Calendar
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i> Profile
+    </a>
+
+    <a href="settings.html">
+        <i class="fa-solid fa-gear"></i> Settings
+    </a>
+</nav>
+
+  <a href="signin.html" class="logout">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+</a>
+</aside>
+  
+
+<!-- OVERLAY (click to close) -->
+<label for="sidebarToggle" class="overlay"></label>
+    
+    <main class="contents">
+
+      <div claa="calendar-container">
+
+        <!-- Calendar Section -->
+        <section class="calendar-section">
+            <h1>Task Calendar</h1>
+
+            <div id="calendar"></div>
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="calendar-sidebar">
+
+            <!-- Selected Date Tasks -->
+            <div class="calendar-cards">
+                <h2>Tasks for Selected Date</h2>
+                <ul id="taskList">
+                    <li>Click a date to view tasks</li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Tasks -->
+            <div class="calendar-card">
+                <h2>Upcoming Tasks</h2>
+                <ul id="upcomingTasks"></ul>
+            </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+    <script src="calendar.js"></script>
+
+</body>
+<footer id="allmypages">
+
+    <h3>MyTasks</h3>
+
+    <p>
+        Organize your life, One task at a time.
+    </p>
+
+    <div class="socials">
+
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 MyTasks. All Rights Reserved.
+    </p>
+
+</footer>
+</html>

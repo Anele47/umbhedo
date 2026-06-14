@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="tasks">
+     <header class="navigation">
+
+    <!-- Left -->
+    <label for="sidebarToggle" class="hamburgers">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Center -->
+    <div class="cover-logoss">
+        <i class="fa-solid fa-check"></i>
+        MyTasks
+    </div>
+
+    <!-- Right -->
+
+        <a href="profile.html" class="profile-btn">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+
+</header>
+    <!-- SIDEBAR -->
+    <!-- HIDDEN CHECKBOX CONTROLLER -->
+    <input type="checkbox" id="sidebarToggle" class="sidebar-toggle" />
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebarapp">
+      <h2 class="logo">Menu </h2>
+
+      <nav>
+        <a href="home.html"> <i class="fa-solid fa-house"></i> Dashboard </a>
+
+        <a href="tasks.html"> <i class="fa-solid fa-list-check"></i> Tasks </a>
+
+        <a href="analytics.html">
+          <i class="fa-solid fa-chart-line"></i> Analytics
+        </a>
+
+        <a href="calendar.html">
+          <i class="fa-solid fa-calendar-days"></i> Calendar
+        </a>
+
+        <a href="profile.html"> <i class="fa-solid fa-user"></i> Profile </a>
+
+        <a href="settings.html"> <i class="fa-solid fa-gear"></i> Settings </a>
+      </nav>
+
+      <a href="index.html" class="logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+      </a>
+    </aside>
+
+    <!-- OVERLAY (click to close) -->
+    <label for="sidebarToggle" class="overlay"></label>
+
+    <!-- TASK CONTAINER -->
+    <main class="contents">
+      <!-- TOP CONTROLS -->
+      <div class="top-controls">
+        <input type="text" id="taskInput" placeholder="Enter a task..." />
+
+        <input type="date" id="dueDate" />
+
+        <select id="prioritySelect">
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+        </select>
+
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <!-- SEARCH + FILTER -->
+      <!-- SEARCH BAR -->
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search tasks..." />
+      </div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-section">
+        <button class="filter-btn active" data-filter="all">All Tasks</button>
+
+        <button class="filter-btn" data-filter="completed">Completed</button>
+
+        <button class="filter-btn" data-filter="pending">Pending</button>
+
+        <button class="filter-btn" data-filter="important">Important</button>
+      </div>
+
+      <!-- TASK LIST -->
+      <div id="taskList" class="task-list"></div>
+    </main>
+    <script src="tasks.js"></script>
+  </body>
+  <footer id="allmypages">
+    <h3>MyTasks</h3>
+
+    <p>Organize your life, One task at a time.</p>
+
+    <div class="socials">
+      <i class="fab fa-github"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-tiktok"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      
+    </div>
+
+    <p class="copyright">© 2026 MyTasks. All Rights Reserved.</p>
+  </footer>
+</html>

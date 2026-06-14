@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loginPage">
+
+  <div class="auth-wrapper">
+
+    <div class="user-container">
+
+      <!-- LOGIN -->
+      <div class="form-box active" id="loginForm">
+        <div class="icon">
+          <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <h2>Welcome </h2>
+
+        <input id="loginEmail" type="email" placeholder="Email Address">
+        <input id="loginPassword" type="password" placeholder="Password">
+
+        <button id="loginBtn">Login</button>
+
+        <p>
+          Don't have an account?
+          <span onclick="showRegister()">Register</span>
+        </p>
+         <div class="forgot-password">
+  <span onclick="showForgot()">Forgot Password?</span>
+        </div>
+      </div>
+
+
+      <!-- REGISTER -->
+      <div class="form-box" id="registerForm">
+        <div class="icon">
+          <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+
+       <input id="fullName" type="text" placeholder="Full Name">
+       <input id="registerEmail" type="email" placeholder="Email Address">
+       <input id="registerPassword" type="password" placeholder="Password">
+       <input id="confirmPassword" type="password" placeholder="Confirm Password">
+
+        <button id="registerBtn">Create Account</button>
+
+        <p>
+          Already have an account?
+          <span onclick="showLogin()">Login</span>
+        </p>
+      </div>
+      <!-- FORGOT PASSWORD -->
+<div class="form-box" id="forgotForm">
+  <div class="icon">
+    <i class="fa-solid fa-key"></i>
+  </div>
+
+
+  <h2>Reset Password</h2>
+
+  <input type="email" placeholder="Enter your email address">
+
+ <button id="forgotBtn">Send Reset Link</button>
+
+  <p>
+    Remember your password?
+    <span onclick="showLogin()">Login</span>
+  </p>
+</div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+  
+</body>
+ <footer id="allmypages">
+
+    <h3>MyTasks</h3>
+
+    <p>
+        Organize your life, One task at a time.
+    </p>
+
+    <div class="socials">
+
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 MyTasks. All Rights Reserved.
+    </p>
+
+</footer>
+</html>

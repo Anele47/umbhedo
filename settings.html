@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <title>Settings</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="setting">
+   <header class="navigation">
+
+    <!-- Left -->
+    <label for="sidebarToggle" class="hamburgers">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Center -->
+    <div class="cover-logoss">
+        <i class="fa-solid fa-check"></i>
+        MyTasks
+    </div>
+
+    <!-- Right -->
+    <div class="nav-actions">
+        <a href="tasks.html" class="addtask-btn">
+            <i class="fa-solid fa-plus"></i>
+            Add Task
+        </a>
+
+        <a href="profile.html" class="profile-btn">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+
+</header>
+ <!-- HIDDEN CHECKBOX CONTROLLER -->
+<input type="checkbox" id="sidebarToggle" class="sidebar-toggle">
+
+
+<!-- SIDEBAR -->
+<aside class="sidebarapp">
+  <h2 class="logo">Menu </h2>
+
+ <nav>
+    <a href="home.html">
+        <i class="fa-solid fa-house"></i> Dashboard
+    </a>
+
+    <a href="tasks.html">
+        <i class="fa-solid fa-list-check"></i> Tasks
+    </a>
+
+    <a href="analytics.html">
+        <i class="fa-solid fa-chart-line"></i> Analytics
+    </a>
+
+    <a href="calendar.html">
+        <i class="fa-solid fa-calendar-days"></i> Calendar
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i> Profile
+    </a>
+
+    <a href="settings.html">
+        <i class="fa-solid fa-gear"></i> Settings
+    </a>
+</nav>
+
+  <a href="signin.html" class="logout">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+</a>
+</aside>
+
+<!-- OVERLAY (click to close) -->
+<label for="sidebarToggle" class="overlay"></label>
+  
+
+
+  <!-- SETTINGS -->
+   <main class="contents">
+
+    <!-- ACCOUNT -->
+
+    <div class="pack">
+
+      <h2>👤 Account Settings</h2>
+
+      <div class="setting">
+        <label>Username</label>
+        <input type="text" id="username">
+      </div>
+
+      <div class="setting">
+        <label>Email</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="setting">
+        <label>New Password</label>
+        <input type="password" id="password">
+      </div>
+
+    </div>
+
+    <h1>Edit Profile</h1>
+
+    <input type="text"
+           id="name"
+           placeholder="Enter Name">
+
+    <input type="email"
+           id="email"
+           placeholder="Enter Email">
+
+    <textarea id="about"
+              placeholder="About You"></textarea>
+
+    <input type="file" id="image">
+
+    
+
+     <button class="save-btn" onclick="saveProfile()">
+        Save Profile
+      </button>
+
+
+    <!-- APPEARANCE -->
+
+    <div class="pack">
+
+      <h2>🎨 Appearance</h2>
+
+      <div class="setting">
+        <label>Theme</label>
+
+        <select id="theme">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+
+      <div class="settings">
+        <label>Font Size</label>
+
+        <select id="fontSize">
+          <option>Small</option>
+          <option selected>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- NOTIFICATIONS -->
+
+    <div class="pack">
+
+      <h2>🔔 Notifications</h2>
+
+      <div class="toggle">
+        <label>Email Notifications</label>
+        <input type="checkbox" id="emailNotify">
+      </div>
+
+      <div class="toggle">
+        <label>Task Reminders</label>
+        <input type="checkbox" id="taskReminder">
+      </div>
+
+      <div class="toggle">
+        <label>Desktop Notifications</label>
+        <input type="checkbox" id="desktopNotify">
+      </div>
+
+    </div>
+
+    <!-- TASK SETTINGS -->
+
+    <div class="pack">
+
+      <h2>📝 Task Preferences</h2>
+
+      <div class="toggle">
+        <label>Show Completed Tasks</label>
+        <input type="checkbox" id="showCompleted" checked>
+      </div>
+
+      <div class="toggle">
+        <label>Enable Task Animations</label>
+        <input type="checkbox" id="animations" checked>
+      </div>
+
+      <div class="toggle">
+        <label>Auto Save Tasks</label>
+        <input type="checkbox" id="autosave" checked>
+      </div>
+
+    </div>
+
+    <!-- SECURITY -->
+
+    <div class="pack">
+
+      <h2>🔒 Security</h2>
+
+      <div class="toggle">
+        <label>Two-Factor Authentication</label>
+        <input type="checkbox" id="twofactor">
+      </div>
+
+      <div class="toggle">
+        <label>Remember Login</label>
+        <input type="checkbox" id="remember">
+      </div>
+
+    </div>
+
+    <!-- SAVE -->
+
+    <div class="pack">
+
+      <button class="save-btn" onclick="saveSettings()">
+        Save Settings
+      </button>
+
+      <p class="message" id="message">
+        Settings Saved Successfully!
+      </p>
+
+    </div>
+  </main>
+
+  </div>
+
+ <script src="settings.js"></script>
+
+
+</body>
+ <footer id="allmypages">
+
+    <h3>MyTasks</h3>
+
+    <p>
+        Organize your life, One task at a time.
+    </p>
+
+    <div class="socials">
+
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 MyTasks. All Rights Reserved.
+    </p>
+
+</footer>
+
+</html>

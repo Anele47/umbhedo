@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager Dashboard</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="task-manager">
+
+   <header class="navigation">
+
+    <!-- Left -->
+    <label for="sidebarToggle" class="hamburgers">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Center -->
+    <div class="cover-logoss">
+        <i class="fa-solid fa-check"></i>
+        MyTasks
+    </div>
+
+    <!-- Right -->
+    <div class="nav-actions">
+        <a href="tasks.html" class="addtask-btn">
+            <i class="fa-solid fa-plus"></i>
+            Add Task
+        </a>
+
+        <a href="profile.html" class="profile-btn">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+
+</header>
+    
+
+    <div class="flexbox-layouts">
+   <!-- HIDDEN CHECKBOX CONTROLLER -->
+<input type="checkbox" id="sidebarToggle" class="sidebar-toggle">
+
+
+
+<!-- SIDEBAR -->
+<aside class="sidebarapp">
+  <h2 class="logo">Menu </h2>
+
+ <nav>
+    <a href="home.html">
+        <i class="fa-solid fa-house"></i> Dashboard
+    </a>
+
+    <a href="tasks.html">
+        <i class="fa-solid fa-list-check"></i> Tasks
+    </a>
+
+    <a href="analytics.html">
+        <i class="fa-solid fa-chart-line"></i> Analytics
+    </a>
+
+    <a href="calendar.html">
+        <i class="fa-solid fa-calendar-days"></i> Calendar
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i> Profile
+    </a>
+
+    <a href="settings.html">
+        <i class="fa-solid fa-gear"></i> Settings
+    </a>
+</nav>
+
+  <a href="signin.html" class="logout">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+</a>
+</aside>
+
+<!-- OVERLAY (click to close) -->
+<label for="sidebarToggle" class="overlay"></label>
+
+      <!-- MAIN CONTENT -->
+      <main class="contents">
+        <!-- TOP BAR -->
+        <div class="dashboard-topbar">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="dashboard-welcome">
+          <div class="welcome-text">
+            <h1 id="welcomeText">Welcome👋</h1>
+            <p>Manage your daily activities and stay productive.</p>
+          </div>
+
+          <img src="https://cdn-icons-png.flaticon.com/512/2387/2387635.png" />
+        </div>
+
+        <!-- MOTIVATION -->
+        <div class="quote-box">
+          <h2>Daily Motivation</h2>
+          <p id="quote">Loading quote...</p>
+        </div>
+
+        <!-- CARDS -->
+        <div class="dashboard-card">
+
+    <div class="dashboard-cards">
+      <h3>Total Tasks</h3>
+      <p id="totalTasks">0</p>
+    </div>
+
+    <div class="dashboard-cards">
+      <h3>Completed</h3>
+      <p id="completedTasks">0</p>
+    </div>
+
+    <div class="dashboard-cards">
+      <h3>Pending</h3>
+      <p id="pendingTasks">0</p>
+    </div>
+
+    <div class="dashboard-cards">
+      <h3>Progress</h3>
+      <p id="progressPercentage">0%</p>
+    </div>
+
+  </div>
+      </main>
+    </div>
+
+    <script src="home.js"></script>
+  </body>
+  <footer id="allmypages">
+
+    <h3>MyTasks</h3>
+
+    <p>
+        Organize your life, One task at a time.
+    </p>
+
+    <div class="socials">
+
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+
+
+    </div>
+
+    <p class="copyright">
+        © 2026 MyTasks. All Rights Reserved.
+    </p>
+
+</footer>
+</html>
